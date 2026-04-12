@@ -11,12 +11,13 @@ class Ship:
 
         # Load the ship image and get its rect
         self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.transform.rotate(self.image, -90)
         self.rect = self.image.get_rect()
         
         # Change position of ship so it's a bit closer to the center
         self.rect.midbottom = self.screen_rect.midbottom
-        self.rect.x += 120
-        self.rect.y -= 100
+        self.rect.x -= 300
+        self.rect.y -= 300
 
         # Store a float for the ship's exact horizontal position
         self.x = float(self.rect.x)
