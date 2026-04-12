@@ -21,6 +21,7 @@ class Ship:
 
         # Store a float for the ship's exact horizontal position
         self.x = float(self.rect.x)
+        self.y = float(self.rect.y)
 
         # movement flag; start with a ship that's not moving
         self.moving_right = False

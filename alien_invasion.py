@@ -19,6 +19,8 @@ class AlienInvasion:
             )
         pygame.display.set_caption("Alien Invasion")
 
+        self.screen_rect = self.screen.get_rect()
+
         self.ship = Ship(ai_game=self)
         self.bullets = pygame.sprite.Group()
 
@@ -39,7 +41,7 @@ class AlienInvasion:
 
         # Get rid of bullets that have disappeared
         for bullet in self.bullets.copy():
-            if bullet.rect.bottom <= 0:
+            if bullet.rect.left >= self.screen_rect.right :
                 self.bullets.remove(bullet)
         print(len(self.bullets))
                
