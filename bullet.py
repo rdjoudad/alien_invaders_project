@@ -1,3 +1,11 @@
+"""
+Bullet.py
+Ryma Djoudad
+Class that controls the bullet behavior, shape and position
+Starter code from participation activity (Python crash course, 3rd edition)
+4/12/2026
+"""
+
 import pygame
 from pygame.sprite import Sprite
 

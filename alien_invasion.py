@@ -1,3 +1,12 @@
+"""
+Alien Invasion Game, Milestone 1
+Ryma Djoudad
+Game that has bullet-firing ship that moves up and down
+Starter code from participation activity (Python crash course, 3rd edition)
+4/11/2026
+"""
+
+
 import sys
 import pygame
 from settings import Settings

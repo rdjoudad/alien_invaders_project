@@ -1,3 +1,11 @@
+"""
+Settings.py
+Ryma Djoudad
+Class that controls the screen dimensions, background color and bullets 
+Starter code from participation activity (Python crash course, 3rd edition)
+4/11/2026
+"""
+
 class Settings:
     """A class to store all settings for Alien Invasion"""
 
