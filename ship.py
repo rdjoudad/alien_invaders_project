@@ -33,6 +33,10 @@ class Ship:
         self.moving_left = False
         self.moving_up = False
         self.moving_down = False
+
+    def left_ship(self):
+        self.rect.midleft = self.screen_rect.midleft
+        self.x = float(self.rect.x)
     
     def update(self):
         """Update the ship's position based on the movement flag"""

@@ -71,7 +71,6 @@ class AlienInvasion:
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
             self._create_fleet()
-
     def _check_bullet_alien_collisions(self):
         """Respond to bullet-alien collisions."""
         # Remove any bullets and aliens that have collided.
@@ -83,9 +82,13 @@ class AlienInvasion:
         self._check_fleet_edges()
         self.aliens.update()
 
-    # Look for alien-ship collisions.
+        # Ship collision
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
-            print("Ship hit!!!")
+            self._ship_hit()
+
+        # Aliens reach left edge
+        self._check_aliens_left()
+
 
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
@@ -97,9 +100,9 @@ class AlienInvasion:
             self.bullets.empty()
             self.aliens.empty()
 
-        # Create a new fleet and center the ship.
+        # Create a new fleet and put the ship to the left
             self._create_fleet()
-            self.ship.center_ship()
+            self.ship.left_ship()
 
         # Pause.
             sleep(0.5)
@@ -111,7 +114,7 @@ class AlienInvasion:
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
 
-    # Look for aliens hitting the left edge of the screen.
+    # Look for aliens hitting the left side of the screen.
         self._check_aliens_left()
 
 
@@ -135,7 +138,6 @@ class AlienInvasion:
         """Check if any aliens have reached the left end of the screen."""
         for alien in self.aliens.sprites():
             if alien.rect.left <= 0:
-                # Treat this the same as if the ship got hit.
                 self._ship_hit()
                 break
 
