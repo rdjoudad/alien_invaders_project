@@ -1,8 +1,4 @@
 """
-if self.moving_up and self.rect.top > 0:
-    self.y -= self.settings.ship_speed
-if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
-    self.y += self.settings.ship_speedettings.py
 Ryma Djoudad
 Class that controls the screen dimensions, background color and bullets 
 Starter code from participation activity (Python crash course, 3rd edition)
