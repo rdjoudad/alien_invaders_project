@@ -1,5 +1,5 @@
 """
-Alien Invasion Game, Milestone 1
+Alien Invasion Game, Milestone 2
 Ryma Djoudad
 Game that has bullet-firing ship that moves up and down
 Starter code from participation activity (Python crash course, 3rd edition)
@@ -67,6 +67,11 @@ class AlienInvasion:
 
         self._check_bullet_alien_collisions()
 
+        if not self.aliens:
+            # Destroy existing bullets and create new fleet.
+            self.bullets.empty()
+            self._create_fleet()
+
     def _check_bullet_alien_collisions(self):
         """Respond to bullet-alien collisions."""
         # Remove any bullets and aliens that have collided.
@@ -109,10 +114,6 @@ class AlienInvasion:
     # Look for aliens hitting the bottom of the screen.
         self._check_aliens_left()
 
-        if not self.aliens:
-            # Destroy existing bullets and create new fleet.
-            self.bullets.empty()
-            self._create_fleet()
 
     def _check_fleet_edges(self):
         """Respond if any aliens have reached an edge."""
