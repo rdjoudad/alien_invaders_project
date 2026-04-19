@@ -128,7 +128,7 @@ class AlienInvasion:
 
         current_y = alien_height
 
-        while current_y < (self.settings.screen_height - 3 * alien_height):
+        while current_y < (self.settings.screen_height - alien_height):
 
             current_x = self.settings.screen_width - alien_width
 
