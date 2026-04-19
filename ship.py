@@ -22,9 +22,7 @@ class Ship:
         self.rect = self.image.get_rect()
         
         # Change position of ship so it's a bit closer to the center
-        self.rect.midbottom = self.screen_rect.midbottom
-        self.rect.x -= 300
-        self.rect.y -= 300
+        self.rect.midleft = self.screen_rect.midleft
 
         # Store a float for the ship's exact horizontal position
         self.x = float(self.rect.x)
