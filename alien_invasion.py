@@ -115,6 +115,19 @@ class AlienInvasion:
         """Game won't have bouncing, no need to."""
         pass
 
+    def left_ship(self):
+        """Put the ship on the left edge of the screen."""
+        self.rect.midleft = self.screen_rect.midleft
+        self.x = float(self.rect.x)
+
+    def _check_aliens_left(self):
+        """Check if any aliens have reached the left end of the screen."""
+        for alien in self.aliens.sprites():
+            if alien.rect.left <= 0:
+                # Treat this the same as if the ship got hit.
+                self._ship_hit()
+                break
+
     def _check_events(self):
         """Respond to keypresses and mouse events"""
         for event in pygame.event.get():
