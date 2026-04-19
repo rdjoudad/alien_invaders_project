@@ -105,28 +105,18 @@ class AlienInvasion:
         # Create an alien and keep adding aliens until there's no room left.
         # Spacing between aliens is one alien width.
         alien = Alien(self)
-        alien_height = alien.rect.height
-        current_y = alien_height
-        while current_y < (self.settings.screen_height + 4 * alien_height):
-            new_alien = Alien(self)
-            new_alien.y = current_y
-            new_alien.rect.y = current_y
-            new_alien.rect.x = alien.rect.x
-            self.aliens.add(new_alien)
-            current_y += 2 * alien_height
-        alien_height, alien_width = alien.rect.size
-
+        alien_width, alien_height = alien.rect.size
         current_x, current_y = alien_width, alien_height
-        while current_y < (self.settings.screen_height - 3 * alien_height):
-            while current_x < (self.settings.screen_width - 2 * alien_width):
+        while current_x < (self.settings.screen_width - 3 * alien_width):
+            while current_y < (self.settings.screen_height + 4 * alien_height):
                 self._create_alien(current_x, current_y)
-                current_x += 2 * alien_width
+                current_y += 2 * alien_height
 
-            # Finished a row; reset x value, and increment y value.
-            current_x = alien_width
-            current_y += 2 * alien_height   
+        # Finished a row; reset x value, and increment y value.
+            current_y = alien_height
+            current_x += 2 * alien_width
 
-    def _create_alien(self, y_position, x_position):
+    def _create_alien(self, x_position, y_position):
         """Create an alien and place it in the row."""
         new_alien = Alien(self)
         new_alien.y = y_position
