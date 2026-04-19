@@ -16,7 +16,7 @@ class Settings:
         self.bg_color = (230, 230, 230)
 
         # Ship settings
-        self.ship_speed = 0.7
+        self.ship_speed = 3
         self.ship_limit = 3
 
         # Bullet settings
@@ -27,5 +27,5 @@ class Settings:
         self.bullets_allowed = 3
 
         # Alien settings
-        self.alien_speed = 1.0
+        self.alien_speed = 0.4
         self.fleet_direction = -1
