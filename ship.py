@@ -1,5 +1,5 @@
 """
-Bullet.py
+Ship.py
 Ryma Djoudad
 Class that controls the ship behavior, shape and position
 Starter code from participation activity (Python crash course, 3rd edition)

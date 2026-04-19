@@ -1,3 +1,11 @@
+"""
+Game Stats Class
+Ryma Djoudad
+Class that initializes and keeps track of changes during game
+Copied from book instructions
+4/19/2026
+"""
+
 class Gamestats:
         
  def __init__(self, ai_game):
