@@ -1,5 +1,5 @@
 """
-Bullet.py
+Ship.py
 Ryma Djoudad
 Class that controls the ship behavior, shape and position
 Starter code from participation activity (Python crash course, 3rd edition)
@@ -22,9 +22,7 @@ class Ship:
         self.rect = self.image.get_rect()
         
         # Change position of ship so it's a bit closer to the center
-        self.rect.midbottom = self.screen_rect.midbottom
-        self.rect.x -= 300
-        self.rect.y -= 300
+        self.rect.midleft = self.screen_rect.midleft
 
         # Store a float for the ship's exact horizontal position
         self.x = float(self.rect.x)
@@ -35,6 +33,10 @@ class Ship:
         self.moving_left = False
         self.moving_up = False
         self.moving_down = False
+
+    def left_ship(self):
+        self.rect.midleft = self.screen_rect.midleft
+        self.x = float(self.rect.x)
     
     def update(self):
         """Update the ship's position based on the movement flag"""
