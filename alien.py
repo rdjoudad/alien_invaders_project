@@ -17,9 +17,9 @@ class Alien(Sprite):
         self.y = float(self.rect.y)
 
     def check_edges(self):
-        """Return True if alien hits top or bottom."""
+        """Return True if ship hits left edge."""
         screen_rect = self.screen.get_rect()
-        return (self.rect.bottom >= screen_rect.bottom) or (self.rect.top <= 0)
+        return self.rect.left <= 0
 
     def update(self):
         """Move the alien to the left while still bouncing up and down."""
