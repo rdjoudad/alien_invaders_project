@@ -1,5 +1,8 @@
 """
-Settings.py
+if self.moving_up and self.rect.top > 0:
+    self.y -= self.settings.ship_speed
+if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+    self.y += self.settings.ship_speedettings.py
 Ryma Djoudad
 Class that controls the screen dimensions, background color and bullets 
 Starter code from participation activity (Python crash course, 3rd edition)
@@ -25,3 +28,8 @@ class Settings:
         self.bullet_height = 3
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
+
+        # Alien settings
+        self.alien_speed = 1.0
+        self.fleet_drop_speed = 10
+        self.fleet_direction = -1  
