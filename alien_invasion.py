@@ -38,6 +38,19 @@ class AlienInvasion:
 
         self._create_fleet()
 
+        self._create_fleet()
+        # Create an alien and keep adding aliens until there's no room left.
+        # Spacing between aliens is one alien width.
+        alien = Alien(self)
+        alien_width = alien.rect.width
+        current_x = alien_width
+        while current_x < (self.settings.screen_width + 4 * alien_width):
+            new_alien = Alien(self)
+            new_alien.x = current_x
+            new_alien.rect.x = current_x
+            self.aliens.add(new_alien)
+            current_x += 2 * alien_width
+
 
     def run_game(self):
         """Start the main loop of the game"""
