@@ -1,3 +1,11 @@
+"""
+Scoreboard Class
+Ryma Djoudad
+Class that keeps track of score and records the highest
+Copied from book instructions
+4/26/2026
+"""
+
 import pygame.font
 from pygame.sprite import Group
 

@@ -1,9 +1,9 @@
 """
-Alien Invasion Game, Milestone 2
+Alien Invasion Game, Milestone 3
 Ryma Djoudad
 Game that has bullet-firing ship that moves up and down
 Starter code from participation activity (Python crash course, 3rd edition)
-4/11/2026
+4/26/2026
 """
 
 

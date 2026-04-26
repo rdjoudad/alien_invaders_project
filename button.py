@@ -1,3 +1,10 @@
+"""
+Button Class
+Ryma Djoudad
+Play button that initiates the game
+Starter code from participation activity (Python crash course, 3rd edition)
+4/26/2026
+"""
 import pygame.font
 
 class Button:
