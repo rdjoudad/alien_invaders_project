@@ -28,4 +28,4 @@ class Settings:
 
         # Alien settings
         self.alien_speed = 0.4
-        self.fleet_direction = -1
+        self.fleet_direction = 1

@@ -126,8 +126,8 @@ class AlienInvasion:
                 break
 
     def _change_fleet_direction(self):
-        """Game won't have bouncing, no need to."""
-        pass
+        """Change the fleet direction so it bounces up-down"""
+        self.settings.fleet_direction *= -1
 
     def left_ship(self):
         """Put the ship on the left edge of the screen."""
