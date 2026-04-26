@@ -36,6 +36,9 @@ class AlienInvasion:
         # Create an instance to store game statistics.
         self.stats = Gamestats(self)
 
+        # Background.
+        self.bg = pygame.image.load("images/nightsky.bmp")
+        self.bg = pygame.transform.scale(self.bg, self.screen.get_size())
         self.screen_rect = self.screen.get_rect()
 
         self.ship = Ship(ai_game=self)
@@ -216,7 +219,7 @@ class AlienInvasion:
 
     def _update_screen(self):
         """Update images and flip screen"""
-        self.screen.fill(self.settings.bg_color)
+        self.screen.blit(self.bg, (0, 0))
 
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
