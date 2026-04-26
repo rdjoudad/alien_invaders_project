@@ -1,4 +1,5 @@
 """
+Settings class
 Ryma Djoudad
 Class that controls the screen dimensions, background color and bullets 
 Starter code from participation activity (Python crash course, 3rd edition)

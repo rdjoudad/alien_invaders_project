@@ -1,3 +1,11 @@
+"""
+Alien.py
+Ryma Djoudad
+Class that controls the alien fleet's behavior, movement and position
+Starter code from participation activity (Python crash course, 3rd edition)
+4/26/2026
+"""
+
 import pygame
 from pygame.sprite import Sprite
 
