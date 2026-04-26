@@ -128,6 +128,9 @@ class AlienInvasion:
     def _change_fleet_direction(self):
         """Change the fleet direction so it bounces up-down"""
         self.settings.fleet_direction *= -1
+        for alien in self.aliens.sprites():
+            alien.rect.x += self.settings.fleet_inch_speed
+            alien.x += self.settings.fleet_inch_speed
 
     def left_ship(self):
         """Put the ship on the left edge of the screen."""
