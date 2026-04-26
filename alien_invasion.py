@@ -201,7 +201,7 @@ class AlienInvasion:
 
             while current_x > 0:
                 self._create_alien(current_x, current_y)
-                current_x -= 4 * alien_width
+                current_x -= 2 * alien_width
 
             current_y += 2 * alien_height  
 
